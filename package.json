@@ -1,0 +1,16 @@
+{
+  "name": "teste-roku",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "brighterscript": "^0.72.2",
+    "dotenv": "^17.4.2",
+    "roku-deploy": "^3.17.4"
+  },
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

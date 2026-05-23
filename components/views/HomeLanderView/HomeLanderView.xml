@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeLanderView" extends="BaseView">
+    <interface>
+        <field id="itemSelected" type="node" alwaysNotify="true"/>
+    </interface>
+    <children>
+        <Label text="Pokemons" translation="[80,40]" font="font:LargeBoldSystemFont" />
+        <Group translation="[80,100]">
+            <RowList 
+                id = "rowList" 
+                translation = "[0, 0]" 
+                itemComponentName = "ItemCard" 
+                numRows = "1" 
+                itemSize = "[1920,400]" 
+                rowItemSize = "[[308,360]]" 
+                itemSpacing = "[0, 40]" 
+                showRowLabel = "[true]" 
+                vertFocusAnimationStyle = "fixedFocusWrap" 
+                rowFocusAnimationStyle = "fixedFocusWrap" />
+        </Group>
+    </children>
+    <script type="text/brightscript" uri="HomeLanderViews.brs" />
+</component>

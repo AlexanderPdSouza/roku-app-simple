@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="AppScene" extends="Scene"  xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <children>
+        <Group id="router"></Group>
+    </children>
+    <script type="text/brightscript" uri="./AppScene.brs"/>
+</component>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="GridLanderView" extends="BaseView">
+    <interface>
+        <field
+            id="contentData"
+            type="node" />
+        <field
+            id="goBack"
+            type="boolean"
+            alwaysNotify="true" />
+    </interface>
+    <children>
+    <Label text="Pokemons Grid" translation="[80,40]" font="font:LargeBoldSystemFont" />
+    <Group translation="[80,100]">        
+        <MarkupGrid
+            id="gridList"
+            translation="[0,0]"
+            itemComponentName="itemCardGrid"
+            numColumns="5"
+            numRows="5"
+            itemSize="[300,380]"
+            itemSpacing="[20,20]"
+            drawFocusFeedback="true"
+            vertFocusAnimationStyle="fixedFocus"
+            wrap="false" />
+        </Group>
+    </children>
+    <script type="text/brightscript" uri="GridLanderView.brs" />
+</component>
