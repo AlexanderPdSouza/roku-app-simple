@@ -1,6 +1,9 @@
 sub init()
     m.rowList = m.top.findNode("rowList")
     m.rowList.observeField("rowItemSelected", "onItemSelected")
+    m.rowList.observeField("rowItemFocused", "onRowItemFocused")
+    m.lastFocusedRow = -1
+    m.lastFocusedItem = -1
     showLoading()
     loadData()
 end sub
@@ -18,9 +21,25 @@ sub onDataLoaded(event)
         node.title = item.name
         urlParts = item.url.tokenize("/")
         id = urlParts[urlParts.count() - 1]
-        node.HDPosterUrl ="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + id + ".png"
+        node.HDPosterUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + id + ".png"
     end for
     m.rowList.content = root
+    m.rowList.setFocus(true)
+end sub
+
+sub onRowItemFocused()
+    focused = m.rowList.rowItemFocused
+    if focused <> invalid
+        m.lastFocusedRow = focused[0]
+        m.lastFocusedItem = focused[1]
+    end if
+end sub
+
+sub restoreFocus()
+    m.rowList.jumpToRowItem = [
+        m.lastFocusedRow,
+        m.lastFocusedItem
+    ]
     m.rowList.setFocus(true)
 end sub
 

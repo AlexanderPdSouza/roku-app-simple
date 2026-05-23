@@ -2,6 +2,7 @@
 <component name="HomeLanderView" extends="BaseView">
     <interface>
         <field id="itemSelected" type="node" alwaysNotify="true"/>
+        <function name="restoreFocus" />
     </interface>
     <children>
         <Label text="Pokemons" translation="[80,40]" font="font:LargeBoldSystemFont" />

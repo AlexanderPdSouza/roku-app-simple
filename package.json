@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "brighterscript": "^0.72.2",
+    "brighterscript": "^0.64.3",
     "dotenv": "^17.4.2",
-    "roku-deploy": "^3.17.4"
+    "roku-deploy": "^3.10.1"
   },
   "scripts": {
+    "package": "roku-deploy --package --configFile roku-deploy.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "dotenv-cli": "^11.0.0"
+  }
 }
