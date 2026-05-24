@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="BaseView" extends="Group">
     <interface>
-        <field id="loading" type="boolean" value="false" />
     </interface>
     <children>
         <Rectangle id="overlay" width="1920" height="1080" color="0x00000088" visible="false" />
     </children>
-    <script type="text/brightscript" uri="BaseView.brs" />
+    <script type="text/brightscript" uri="./BaseView.brs" />
 </component>

@@ -1,6 +1,5 @@
 sub init()
     m.itemposter = m.top.findNode("itemPoster")
-    m.itemmask = m.top.findNode("itemMask")
     m.itemlabel = m.top.findNode("itemLabel")
 end sub
 

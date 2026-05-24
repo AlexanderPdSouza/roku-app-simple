@@ -21,8 +21,7 @@
             itemSize="[300,380]"
             itemSpacing="[20,20]"
             drawFocusFeedback="true"
-            vertFocusAnimationStyle="fixedFocus"
-            wrap="false" />
+            vertFocusAnimationStyle="fixedFocus" />
         </Group>
     </children>
     <script type="text/brightscript" uri="GridLanderView.brs" />

@@ -4,6 +4,8 @@ sub init()
     navigateTo("HomeLanderView")
 end sub
 
+'' navigateTo 
+'Navega para a tela criando uma ui mais limpa e solida, tendo controle do que vai ser renderizado guardando o component anterior e criando o novo
 sub navigateTo(viewName as string, data = invalid)
     if m.currentView <> invalid
         m.currentView.visible = false
@@ -20,6 +22,8 @@ sub navigateTo(viewName as string, data = invalid)
     view.setFocus(true)
 end sub
 
+''navigateBack
+'Navegar para tras utilizado o component já criado, trazendo todas a informações existente nele,ex vai para o mesmo item que estava em foco quando passou para proxima tela.
 sub navigateBack()
     if m.viewStack.count() <= 1
         return
@@ -33,6 +37,8 @@ sub navigateBack()
     m.currentView = previousView
 end sub
 
+''setupObservers
+'só cria os observers para cada tipo de view para deixar a função navigateTo limpa.
 sub setupObservers(viewName as string, view as object)
     if viewName = "HomeLanderView"
         view.observeField("itemSelected", "onItemSelected")
@@ -43,11 +49,15 @@ sub setupObservers(viewName as string, view as object)
     end if
 end sub
 
+''onItemSelected
+'fallback para o clique no item.
 sub onItemSelected(event as dynamic)
     content = event.getData()
     navigateTo("GridLanderView", content)
 end sub
 
+''onBackPressed
+'função que é ativada quando é apertado o back.
 sub onBackPressed()
     navigateBack()
 end sub

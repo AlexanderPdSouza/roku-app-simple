@@ -4,12 +4,10 @@ sub init()
     m.rowList.observeField("rowItemFocused", "onRowItemFocused")
     m.lastFocusedRow = -1
     m.lastFocusedItem = -1
-    showLoading()
     loadData()
 end sub
 
 sub onDataLoaded(event)
-    hideLoading()
     data = event.getData()
     if data = invalid or data.results = invalid
         return
