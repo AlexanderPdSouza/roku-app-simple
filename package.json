@@ -8,7 +8,6 @@
     "roku-deploy": "^3.10.1"
   },
   "scripts": {
-    "package": "roku-deploy --package --configFile roku-deploy.json"
   },
   "keywords": [],
   "author": "",
