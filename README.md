@@ -1,7 +1,7 @@
 # roku-app-simple
 roku app teste 
 
-Para utilizar precimos seguir alguns passos. 
+Para utilizar precisamos seguir alguns passos. 
 
 1º npm install - instalar as dependencias;
 2º trocar o nome do arquivo .env.exemple para apenas .env e adiconar suas informações do device ip e senha; 
